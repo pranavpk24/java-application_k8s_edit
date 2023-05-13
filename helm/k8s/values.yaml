@@ -1,0 +1,17 @@
+deployment:
+  name: tcapp-deployment
+  namespace: java_webapp
+  replicaCount: 2
+
+image:
+  repository: pranavpk24/java_ex:1
+  pullPolicy: Always
+  containerName: java-webapp
+  imagePullSecrets: dockerhub
+  containerPort: 3080
+  
+service:
+  type: NodePort
+  clusterIPPort: 80
+  targetPort: 8080
+  nodePort: 32000
