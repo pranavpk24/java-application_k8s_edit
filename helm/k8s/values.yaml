@@ -1,6 +1,6 @@
 deployment:
   name: tcapp-deployment
-  namespace: java_webapp
+  namespace: springboot
   replicaCount: 2
 
 image:
